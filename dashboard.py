@@ -446,7 +446,7 @@ label_dict = {'year':'Year', 'gdp_per_capita ($)': 'GDP per capita ($)', 'HDI fo
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
+server = app.server
 app.layout = html.Div(
     [
         html.Div(
@@ -867,5 +867,5 @@ def update_boxplot(json, category, clickData, selectedData):
 
 
 if __name__ == '__main__':
-    server = app.server
+    
     app.run_server(debug=False)
